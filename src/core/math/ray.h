@@ -1,5 +1,5 @@
-#ifndef RAY_H
-#define RAY_H
+#ifndef SRC_CORE_MATH_RAY_H_
+#define SRC_CORE_MATH_RAY_H_
 
 #include "core/types.h"
 #include "vec3.h"
@@ -25,4 +25,4 @@ class ray {
   vec3 direction_;
 };
 
-#endif  // RAY_H
+#endif  // SRC_CORE_MATH_RAY_H_

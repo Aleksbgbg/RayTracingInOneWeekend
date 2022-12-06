@@ -1,5 +1,5 @@
-#ifndef COLOR_H
-#define COLOR_H
+#ifndef SRC_CORE_MATH_COLOR_H_
+#define SRC_CORE_MATH_COLOR_H_
 
 #include <iostream>
 
@@ -16,4 +16,11 @@ void write_color(std::ostream& out, color color) {
   out << outR << ' ' << outG << ' ' << outB << '\n';
 }
 
-#endif  // COLOR_H
+namespace colors {
+
+inline constexpr color kWhite(1.0_r, 1.0_r, 1.0_r);
+inline constexpr color kLightBlue(0.5_r, 0.7_r, 1.0_r);
+
+}
+
+#endif  // SRC_CORE_MATH_COLOR_H_

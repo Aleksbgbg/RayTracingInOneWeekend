@@ -10,8 +10,8 @@
 struct vec3 {
   real entries[3];
 
-  vec3() : entries{0, 0, 0} {}
-  vec3(real entry0, real entry1, real entry2)
+  constexpr vec3() : entries{0, 0, 0} {}
+  constexpr vec3(real entry0, real entry1, real entry2)
       : entries{entry0, entry1, entry2} {}
 
   real x() const {
@@ -96,5 +96,12 @@ inline vec3 unit_vector(vec3 vector) {
 }
 
 using point3 = vec3;
+
+namespace vectors {
+
+inline constexpr vec3 kZero(0.0_r, 0.0_r, 0.0_r);
+inline constexpr vec3 kOne(1.0_r, 1.0_r, 1.0_r);
+
+}
 
 #endif  // SRC_CORE_MATH_VEC3_H_
