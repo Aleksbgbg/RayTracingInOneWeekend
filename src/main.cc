@@ -1,5 +1,6 @@
 #include <iostream>
 
+#include "core/math/color.h"
 #include "core/types.h"
 
 int main() {
@@ -19,11 +20,7 @@ int main() {
       real g = as<real>(row) / as<real>(max_pixel_y);
       real b = 0.25_r;
 
-      int outR = as<int>(255_r * r);
-      int outG = as<int>(255_r * g);
-      int outB = as<int>(255_r * b);
-
-      std::cout << outR << ' ' << outG << ' ' << outB << '\n';
+      write_color(std::cout, color(r, g, b));
     }
   }
 
