@@ -1,0 +1,5 @@
+set(BINARY_NAME ${CMAKE_PROJECT_NAME})
+
+set(SOURCE_FILES main.cc)
+
+add_executable(${BINARY_NAME} ${SOURCE_FILES})
